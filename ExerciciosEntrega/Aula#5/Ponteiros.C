@@ -22,7 +22,7 @@ int main(){
     // Valores inseridos e seu endereço de mem[oria]
     printf("A seguir os seguintes números inseridos e seus endereços de memória:\n");
         for (i =0; i < quantidadeNumero; i++) {// ATENÇÃO EM USAR PONTO E VIRGULA PARA SEPARAR O FOR
-        printf("Número: %.2f    Endereço: %p\n", *ptr, (void *)ptr); //Valor e indereço de memória
+        printf("Número: %.2f    Endereço: %p\n", *ptr, (void *)ptr); //Valor e endereço de memória
         ptr++; //Avançar para o próximo elemento do array
     }
 return 0;
@@ -32,11 +32,12 @@ return 0;
 "(void *)": é a parte da conversão de tipo. Estamos convertendo o tipo de ptr para um ponteiro genérico (void *). 
 Um ponteiro genérico em C pode apontar para qualquer tipo de dado, porque void * representa um endereço de memória sem tipo específico.
 
-A razão pela qual estamos fazendo essa conversão é que %p, o especificador de formato usado no printf para imprimir endereços de memória,
-espera um argumento do tipo "void *"". Portanto, precisamos converter ptr para o tipo void * para satisfazer os requisitos do %p.
+A razão pela qual faz essa conversão é que %p, o especificador de formato usado no printf para imprimir endereços de memória,
+espera um argumento do tipo "void *"". Portanto, precisa converter ptr para o tipo void * para satisfazer os requisitos do %p.
 
-O (void *) é usado para evitar warnings ou erros de compilação que podem ocorrer se tentarmos imprimir diretamente um ponteiro de outro tipo
+O (void *) é usado para evitar warnings ou erros de compilação que podem ocorrer se imprimir diretamente um ponteiro de outro tipo
 sem uma conversão explícita para void *. Isso porque em C há restrições de tipo rígidas e o compilador pode emitir um aviso ou erro se você
 tentar usar um tipo de ponteiro incorreto em uma função printf que espera um tipo específico de argumento. Ao converter para void *, 
-estamos dizendo ao compilador que não estamos preocupados com o tipo exato do ponteiro neste contexto, apenas queremos imprimir o endereço de memória.
+estamos dizendo ao compilador que não estamos preocupados com o tipo exato do ponteiro neste contexto, apenas queremos imprimir o endereço
+de memória.
 */
