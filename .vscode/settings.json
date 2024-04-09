@@ -2,6 +2,7 @@
     "files.associations": {
         "Depreciacao.C": "cpp",
         "ClassificacaoIMC.C": "cpp",
-        "Segundos.C": "cpp"
+        "Segundos.C": "cpp",
+        "Contador_Caracteres.C": "cpp"
     }
 }
