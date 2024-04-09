@@ -8,15 +8,24 @@ Data:9/04/2024
 #include <stdio.h>
 #include <string.h>
 // contar caracteres
+//escopo
+int contador_caracteres(char frase[600]);
 int main()
 {
     char frase[600];
 
+    // 
     printf("Digite a frase que deseja contar a quantidade de caracteres: ");
     scanf(" %[^\n]", frase);
-    // converter a frase para int
-    int caracteres = strlen(frase); // conta acento e espaço
-    printf("\nA quantidade de caracteres é de: %d", caracteres); 
+    // chamar a função para a frase 
+    contador_caracteres(frase);
 
     return 0;
+}
+
+
+//função para contar caracteres
+int contador_caracteres (char frase[600]){
+    int caracteres = strlen(frase); // conta acento e espaço
+    printf("\nA quantidade de caracteres é de: %d", caracteres); 
 }
